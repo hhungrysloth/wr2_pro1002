@@ -32,3 +32,25 @@ while True:
         continue
 
     print(f"Updated task list: {my_tasks}") # Print the updated task list after each command
+
+# 3. Simple class and Inheritance
+
+class Person: # Define a Person class with name and age attributes
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self): # Define a method to greet the person
+        print(f"Hi, I am {self.name}, a student at ONF, and I am {self.age} years old.")
+
+
+class Student(Person): # Define a Student class that inherits from Person and adds a student_id attribute
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+
+
+student = Student("Vic", 30, "3001638") # Create an instance of the Student class with name, age, and student_id
+
+student.greet() # Call the greet method of the Student instance to print a greeting message
+print(f"Student ID: {student.student_id}") # Print the student ID of the Student instance
